@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author Rita
+ *
+ */
+module A {
+}
