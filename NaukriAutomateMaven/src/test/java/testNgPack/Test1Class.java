@@ -26,7 +26,8 @@ public class Test1Class extends Browser {
 	@BeforeSuite
 	public void beforeSuite()
 	{
-		System.out.println("Before Suite");
+		//System.out.println("Before Suite");
+		System.out.println("Before Suite for conflict");
 	}
 	
 	@Parameters("browser")
