@@ -1,44 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="2" parallel="tests" name="Failed suite [Naukri Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="2" parallel="tests" name="ChromeTest(failed)">
-    <parameter name="browser" value="Chrome"/>
-    <classes>
-      <class name="testNgPack.Test2Class">
-        <methods>
-          <include name="openbrowser"/>
-          <include name="aftermethod"/>
-          <include name="beforeMethod"/>
-          <include name="afterTest"/>
-          <include name="test1"/>
-          <include name="afterclass"/>
-          <include name="openBrowser"/>
-        </methods>
-      </class> <!-- testNgPack.Test2Class -->
-      <class name="testNgPack.Test1Class">
-        <methods>
-          <include name="test3"/>
-          <include name="afterclass"/>
-          <include name="openbrowser"/>
-          <include name="beforeMethod"/>
-          <include name="openBrowser"/>
-          <include name="afterTest"/>
-          <include name="aftermethod"/>
-        </methods>
-      </class> <!-- testNgPack.Test1Class -->
-    </classes>
-  </test> <!-- ChromeTest(failed) -->
-  <test thread-count="2" parallel="tests" name="FirefoxTest(failed)">
+<suite name="Failed suite [Naukri Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="tests" name="FirefoxTest(failed)">
     <parameter name="browser" value="Firefox"/>
     <classes>
       <class name="testNgPack.Test1Class">
         <methods>
-          <include name="test3"/>
           <include name="afterclass"/>
           <include name="openbrowser"/>
           <include name="beforeMethod"/>
+          <include name="aftersuite"/>
           <include name="openBrowser"/>
           <include name="afterTest"/>
+          <include name="test1"/>
+          <include name="beforeSuite"/>
           <include name="aftermethod"/>
         </methods>
       </class> <!-- testNgPack.Test1Class -->

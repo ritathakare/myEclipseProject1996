@@ -52,8 +52,8 @@ System.setProperty("webdriver.chrome.driver","C:\\Users\\Rita\\Downloads\\chrome
    WebElement pinkshade=driver.findElement(By.xpath("//div[@id='custom-scroll']//span[1]"));
    pinkshade.click();
    
-   WebElement view=driver.findElement(By.xpath("(//div[@class='css-1hd8apt'])[1]//button[1]"));
-   view.click();
+//   WebElement view=driver.findElement(By.xpath("(//div[@class='css-1hd8apt'])[1]//button[1]"));
+//   view.click();
    
 //   WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(30));
    

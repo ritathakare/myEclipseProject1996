@@ -1,5 +1,5 @@
 package testNgPack;
-
+/*Rita thakare*/
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
@@ -8,18 +8,26 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import browser.Browser;
 import pomClasses.JobsRegisterPage;
 
-public class Test1Class {
+public class Test1Class extends Browser {
 	
 	WebDriver driver;
+	@BeforeSuite
+	public void beforeSuite()
+	{
+		System.out.println("Before Suite");
+	}
 	
 	@Parameters("browser")
 	@BeforeTest
@@ -27,13 +35,11 @@ public class Test1Class {
 	{
 		if(browserName.equals("Chrome"))
 		{
-			System.setProperty("webdriver.chrome.driver","C:\\Users\\Rita\\Downloads\\chromedriver_win32 (1)\\chromedriver.exe");
-		    driver=new ChromeDriver();
+			driver = openChromeBrowser();
 		}
 		if(browserName.equals("Firefox"))
 		{
-			System.setProperty("webdriver.gecko.driver","C:\\Users\\Rita\\Downloads\\geckodriver-v0.32.1-win32\\geckodriver.exe");
-		    driver=new FirefoxDriver();
+			driver = openFirefoxBrowser();
 		}
 	}
 	
@@ -56,10 +62,12 @@ public class Test1Class {
 	{
 	JobsRegisterPage jobsRegisterPage = new JobsRegisterPage(driver);
 	jobsRegisterPage.jobSearch();
-//	String actualUrl = driver.getCurrentUrl();
-//	System.out.println(actualUrl);
-	String actualUrl = "https://www.firstnaukri.com/jobs-internship";
+	String actualUrl = driver.getCurrentUrl();
+	System.out.println(actualUrl);
+//	String actualUrl = "https://www.firstnaukri.com/jobs-internship";
 	String expectedUrl = "https://www.firstnaukri.com/jobs-internship";
+	System.out.println(expectedUrl);
+
 	Thread.sleep(3000);
 //	String actualTitle=driver.getTitle();
 //	System.out.println(actualTitle);
@@ -79,12 +87,12 @@ public class Test1Class {
    //To decide the test method result i.e.passed/failed
   //If actual result is equals to expected result then test case is passed
  //If actual result is not equals to expected result then test case is failed
-
-	Assert.assertEquals(actualUrl, expectedUrl);
+	Assert.assertEquals(actualUrl, expectedUrl, "The URL is not matched");
+   //  Assert.assertEquals(actualUrl, expectedUrl);
 
 	}
 	
-	@Test
+	@Test(enabled = true)
 	public void test2() throws InterruptedException
 	{
 	 try 
@@ -119,7 +127,7 @@ public class Test1Class {
 		 System.out.println(e);
 	 }
     }
-	@Test
+	@Test(enabled = true)
 	public void test3() throws InterruptedException
 	{
 		 JobsRegisterPage jobsRegisterPage = new JobsRegisterPage(driver);
@@ -157,11 +165,17 @@ public class Test1Class {
 	{
 	 System.out.println("After_Class");	
 	}
-	@AfterTest()
+	@AfterTest
 	public void afterTest()
 	{
 		System.out.println("After Test");
 		driver.quit();
+	}
+	
+	@AfterSuite
+	public void aftersuite()
+	{
+		System.out.println("After suite for TestNg Class 1 ");
 	}
 	
 }
