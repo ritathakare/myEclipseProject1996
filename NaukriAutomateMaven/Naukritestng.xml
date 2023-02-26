@@ -1,19 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Naukri Suite" >
-  <test thread-count ="2" name="ChromeTest" parallel="tests">
+  <test thread-count ="2" name ="Chrome" >
   <parameter name="browser" value="Chrome"></parameter>
   <classes>
       <class name="testNgPack.Test1Class"/>
-      <class name="testNgPack.Test2Class"/> 
    </classes>
   </test> <!-- Test123 -->
-
-    <test thread-count ="2" name="FirefoxTest" parallel="tests">
-    <parameter name="browser" value="Firefox"></parameter>
-      <classes>
-      <class name="testNgPack.Test1Class"/>
-      <class name="testNgPack.Test2Class"/> 
-    </classes>
-  </test> <!-- Test456 -->
  </suite> <!-- Suite -->

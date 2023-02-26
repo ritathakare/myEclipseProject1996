@@ -9,18 +9,21 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">Naukri Suite</th></tr>
-<tr><td><a href="#t0">ChromeTest</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">55,393</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t1">FirefoxTest</a></td><td class="num">1</td><td class="num">0</td><td class="num attn">1</td><td class="num">43,876</td><td></td><td></td></tr>
-<tr><th>Total</th><th class="num">3</th><th class="num">0</th><th class="num attn">1</th><th class="num">99,269</th><th colspan="2"></th></tr>
+<tr><td><a href="#t0">Chrome</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">3</td><td class="num">13,492</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Naukri Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">ChromeTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">testNgPack.Test1Class</td><td><a href="#m0">test1</a></td><td rowspan="1">1676033985857</td><td rowspan="1">5503</td></tr><tr class="passedodd"><td rowspan="1">testNgPack.Test2Class</td><td><a href="#m1">test1</a></td><td rowspan="1">1676034003569</td><td rowspan="1">22195</td></tr></tbody>
-<tbody id="t1"><tr><th colspan="4">FirefoxTest &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">testNgPack.Test1Class</td><td><a href="#m2">test1</a></td><td rowspan="1">1676034045012</td><td rowspan="1">3277</td></tr><tr><th colspan="4">FirefoxTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">testNgPack.Test2Class</td><td><a href="#m3">test1</a></td><td rowspan="1">1676034054030</td><td rowspan="1">14461</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Naukri Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Chrome &#8212; failed</th></tr><tr class="failedeven"><td rowspan="3">testNgPack.Test1Class</td><td><a href="#m0">test1</a></td><td rowspan="1">1677145184504</td><td rowspan="1">20</td></tr><tr class="failedeven"><td><a href="#m1">test2</a></td><td rowspan="1">1677145184551</td><td rowspan="1">1</td></tr><tr class="failedeven"><td><a href="#m2">test3</a></td><td rowspan="1">1677145184554</td><td rowspan="1">1</td></tr></tbody>
 </table>
-<h2>ChromeTest</h2><h3 id="m0">testNgPack.Test1Class#test1</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">testNgPack.Test2Class#test1</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>FirefoxTest</h2><h3 id="m2">testNgPack.Test1Class#test1</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: The URL is not matched expected [https://www.firstnaukri.com/jobs-internship] but found [https://www.firstnaukri.com/]
-	at testNgPack.Test1Class.test1(Test1Class.java:90)
-... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">testNgPack.Test2Class#test1</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Chrome</h2><h3 id="m0">testNgPack.Test1Class#test1</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NoSuchMethodError: &apos;void org.openqa.selenium.support.PageFactory.initElements(org.openqa.selenium.WebDriver, java.lang.Object)&apos;
+	at pomClasses.JobsRegisterPage.&lt;init&gt;(JobsRegisterPage.java:39)
+	at testNgPack.Test1Class.test1(Test1Class.java:64)
+... Removed 23 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">testNgPack.Test1Class#test2</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NoSuchMethodError: &apos;void org.openqa.selenium.support.PageFactory.initElements(org.openqa.selenium.WebDriver, java.lang.Object)&apos;
+	at pomClasses.JobsRegisterPage.&lt;init&gt;(JobsRegisterPage.java:39)
+	at testNgPack.Test1Class.test2(Test1Class.java:102)
+... Removed 23 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">testNgPack.Test1Class#test3</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NoSuchMethodError: &apos;void org.openqa.selenium.support.PageFactory.initElements(org.openqa.selenium.WebDriver, java.lang.Object)&apos;
+	at pomClasses.JobsRegisterPage.&lt;init&gt;(JobsRegisterPage.java:39)
+	at testNgPack.Test1Class.test3(Test1Class.java:134)
+... Removed 23 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

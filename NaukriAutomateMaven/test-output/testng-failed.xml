@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Naukri Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" parallel="tests" name="FirefoxTest(failed)">
-    <parameter name="browser" value="Firefox"/>
+  <test thread-count="5" name="Chrome(failed)">
+    <parameter name="browser" value="Chrome"/>
     <classes>
       <class name="testNgPack.Test1Class">
         <methods>
+          <include name="test3"/>
           <include name="afterclass"/>
           <include name="openbrowser"/>
           <include name="beforeMethod"/>
+          <include name="test2"/>
           <include name="aftersuite"/>
           <include name="openBrowser"/>
           <include name="afterTest"/>
@@ -18,5 +20,5 @@
         </methods>
       </class> <!-- testNgPack.Test1Class -->
     </classes>
-  </test> <!-- FirefoxTest(failed) -->
+  </test> <!-- Chrome(failed) -->
 </suite> <!-- Failed suite [Naukri Suite] -->
