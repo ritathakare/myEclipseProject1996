@@ -6,11 +6,9 @@
     <classes>
       <class name="testNgPack.Test1Class">
         <methods>
-          <include name="test3"/>
           <include name="afterclass"/>
           <include name="openbrowser"/>
           <include name="beforeMethod"/>
-          <include name="test2"/>
           <include name="aftersuite"/>
           <include name="openBrowser"/>
           <include name="afterTest"/>

@@ -6,11 +6,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class JobsRegisterPage extends BaseClass {
-	public JobsRegisterPage(WebDriver driver) {
-		super(driver);
-		
-	}
+public class JobsRegisterPage{ 
+	
 	WebDriver driver;//Global variable
 	private Actions act;
 	
@@ -37,14 +34,14 @@ public class JobsRegisterPage extends BaseClass {
 	
 	//Constructor--public--webelement Initialization
    // Findelement
-	/*
+	
 	public JobsRegisterPage(WebDriver driver)
 	{
 	   PageFactory.initElements(driver,this);
 	   this.driver=driver; // Initialization of 
 	   act = new Actions(driver);//Local webdriver variable
 	}
-	*/
+	
 	//Methods--public--Webelement actions
 	public void jobSearch()
 	{
