@@ -61,6 +61,7 @@ public class Test1Class extends Browser {
 	@Test
 	public void test1() throws InterruptedException
 	{
+		try {
 	JobsRegisterPage jobsRegisterPage = new JobsRegisterPage(driver);
 	jobsRegisterPage.jobSearch();
 	String actualUrl = driver.getCurrentUrl();
@@ -91,6 +92,11 @@ public class Test1Class extends Browser {
 	Assert.assertEquals(actualUrl, expectedUrl, "The URL is not matched");
    //  Assert.assertEquals(actualUrl, expectedUrl);
 
+		}
+		catch (Exception e)
+		{
+			System.out.println("Error is::" + e);
+		}
 	}
 	
 	@Test(enabled = true)

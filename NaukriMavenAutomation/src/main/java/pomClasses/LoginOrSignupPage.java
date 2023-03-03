@@ -5,11 +5,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginOrSignupPage extends BaseClass {
+public class LoginOrSignupPage  {
 	
-	public LoginOrSignupPage(WebDriver driver) {
-		super(driver);
-	}
+	WebDriver driver;
+	
 	//Variable = webelement = private
 	@FindBy(xpath="//input[@id='email']")
 	private WebElement userName;
@@ -22,13 +21,14 @@ public class LoginOrSignupPage extends BaseClass {
 	
 	@FindBy(xpath="//a[text()='Create new account']")
 	private WebElement createNeAccount;
-	/*
+	
 	//constructor = webelement Initialization =public
 	public LoginOrSignupPage(WebDriver driver)
 	{
 	 PageFactory.initElements(driver,this);	
+	 this.driver = driver;
 	}
-	*/
+	
    //Methods = webelement Action = public
 	
 	public void senduserName()

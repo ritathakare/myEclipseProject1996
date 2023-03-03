@@ -5,12 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class ResumePage extends BaseClass{
+public class ResumePage {
 	
-	public ResumePage(WebDriver driver) {
-		super(driver);
-		
-	}
 	WebDriver driver;
 	
 	@FindBy(xpath="//div[text()='Resume Maker']")
@@ -27,12 +23,12 @@ public class ResumePage extends BaseClass{
 	
 	@FindBy(xpath="//button[text()='Create account']")
 	private WebElement createaccount;
-/*
+//Constructor
 	public ResumePage(WebDriver driver) {
 		PageFactory.initElements(driver,this);
 		this.driver = driver;
 	}
-	*/
+	
 	public void resumeMaker() {
 		resumemaker.click();
 	}
